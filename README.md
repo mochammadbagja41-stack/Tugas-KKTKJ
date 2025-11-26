@@ -59,32 +59,35 @@ Kadang membingungkan pemula
 
 1.  Melakukan *update* dan *upgrade* sistem.
     ```bash
-    sudo apt update && sudo apt upgrade -y
+    apt update && apt upgrade 
     ```
 2.  Memastikan konfigurasi jaringan (Bridge/NAT/Host-Only) sudah benar.
 
 #### 2.2. Instalasi dan Konfigurasi Web Server 🌐
 
-Kami menggunakan **[NAMA WEB SERVER]**. Berikut langkah-langkah utamanya:
+Kami menggunakan **OLS**. Berikut langkah-langkah utamanya:
 
+***Tambahkan repository OpenLiteSpeed:**
+```bash
+wget -O - https://repo.litespeed.sh | bash
+```
 * **Instalasi:**
     ```bash
-    # [Tuliskan perintah instalasi Web Server Kalian, contoh: sudo apt install nginx -y]
+    apt install openlitespeed
     ```
-* **Konfigurasi Virtual Host/Server Block:**
-    [Jelaskan secara singkat penyesuaian konfigurasi yang Kalian lakukan pada file utama, misalnya penentuan Document Root dan port.]
-
 #### 2.3. Konfigurasi PHP 🐘
 
-Kami menggunakan **[JENIS PHP: mod_php / php-fpm / lsphp]** untuk mengintegrasikan PHP dengan *Web Server*.
+Kami menggunakan **lsphp** untuk mengintegrasikan PHP dengan *Web Server*.
 
 * **Instalasi PHP:**
     ```bash
-    # [Tuliskan perintah instalasi PHP dan modul yang dibutuhkan]
-    sudo apt install php-fpm php-mysql
+    apt install lsphp84 lsphp84-mysql
     ```
-* **Integrasi:**
-    [Jelaskan langkah-langkah integrasi antara PHP dengan Web Server yang Kalian pilih.]
+**Start dan aktifkan service**
+```bash
+systemctl start lsws
+systemctl enable lsws
+```
 
 #### 2.4. Implementasi SSL (HTTPS) 🔒
 
