@@ -75,6 +75,7 @@ wget -O - https://repo.litespeed.sh | bash
     ```bash
     apt install openlitespeed
     ```
+* **Konfigurasi Virtual Host/Server Block:** [Jelaskan secara singkat penyesuaian konfigurasi yang Kalian lakukan pada file utama, misalnya penentuan Document Root dan port.]
 #### 2.3. Konfigurasi PHP 🐘
 
 Kami menggunakan **lsphp** untuk mengintegrasikan PHP dengan *Web Server*.
@@ -83,19 +84,7 @@ Kami menggunakan **lsphp** untuk mengintegrasikan PHP dengan *Web Server*.
     ```bash
     apt install lsphp84 lsphp84-mysql
     ```
-**Start dan aktifkan service**
-```bash
-systemctl start lsws
-systemctl enable lsws
-```
-**Jalankan script yang sudah disediakan**
-```bash
-/usr/local/lsws/admin/misc/admpass.sh
-```
-Masukkan username (misal: admin)
-Buat password → konfirmasi
-Buka browser: http://ip-server:7080
-
+**Integrasi:** [Jelaskan langkah-langkah integrasi antara PHP dengan Web Server yang Kalian pilih.]
 #### 2.4. Implementasi SSL (HTTPS) 🔒
 
 Untuk mengaktifkan akses HTTPS, kami membuat *self-signed certificate*.
