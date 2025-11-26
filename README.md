@@ -12,10 +12,10 @@ Proyek ini dibuat untuk memenuhi tugas mata pelajaran **Administrasi Sistem Jari
 
 | Peran | Nama Lengkap | Kelas |
 | :--- | :--- | :--- |
-| **Ketua Kelompok** | [Nama Lengkap Ketua] | [Kelas Kalian] |
-| Anggota 1 | [Nama Lengkap Anggota 1] | [Kelas Kalian] |
-| Anggota 2 | [Nama Lengkap Anggota 2] | [Kelas Kalian] |
-| **Nama Sekolah/Institusi** | [Nama Sekolah/Institusi Kalian] | |
+| **Ketua Kelompok** | Moch.Bagja Alif S | XI TJKT 2 |
+| Anggota 1 | Kirania Santana | XI TJKT 2 |
+| Anggota 2 | Risma Agustin | XI TJKT 2 |
+| **Nama Sekolah/Institusi** | SMKN 1 SOREANG | |
 
 #### 1.2. Spesifikasi Alat dan Bahan (Host) 🛠️
 
