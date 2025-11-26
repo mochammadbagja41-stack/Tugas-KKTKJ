@@ -88,6 +88,13 @@ Kami menggunakan **lsphp** untuk mengintegrasikan PHP dengan *Web Server*.
 systemctl start lsws
 systemctl enable lsws
 ```
+**Jalankan script yang sudah disediakan**
+```bash
+/usr/local/lsws/admin/misc/admpass.sh
+```
+Masukkan username (misal: admin)
+Buat password → konfirmasi
+Buka browser: http://ip-server:7080
 
 #### 2.4. Implementasi SSL (HTTPS) 🔒
 
