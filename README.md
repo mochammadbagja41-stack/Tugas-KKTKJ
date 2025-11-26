@@ -4,6 +4,8 @@
 
 Proyek ini dibuat untuk memenuhi tugas mata pelajaran **Administrasi Sistem Jaringan (ASJ)**, yang merupakan salah satu elemen Capaian Pembelajaran Konsentrasi Keahlian Teknik Komputer dan Jaringan (**CP KKTKJ**) pada program TJKT. Proyek ini berfokus pada implementasi layanan Web Server, konfigurasi PHP, dan pengamanan koneksi menggunakan SSL/HTTPS.
 
+
+
 ---
 
 ### 1. 👥 Informasi Kelompok dan Spesifikasi Lingkungan Praktik
@@ -21,21 +23,21 @@ Proyek ini dibuat untuk memenuhi tugas mata pelajaran **Administrasi Sistem Jari
 
 | Komponen | Deskripsi / Versi |
 | :--- | :--- |
-| **Virtualisasi** | [Versi VMware Workstation yang Digunakan, contoh: VMware Workstation 17 Pro] |
-| **Sistem Operasi Host** | [OS yang digunakan di laptop/PC utama, contoh: Windows 11 / macOS Sonoma] |
-| **RAM Host (Minimal)** | [RAM Minimal yang digunakan di Host, contoh: 8 GB] |
-| **CPU Host** | [Tuliskan jenis/seri CPU, contoh: Intel Core i5 Generasi ke-10] |
+| **Virtualisasi** | VMware Workstation 17 Pro |
+| **Sistem Operasi Host** | Windows 11 Home |
+| **RAM Host** | 4 GB |
+| **CPU Host** | AMD A4-9125 RADEON R3 |
 
 #### 1.3. Spesifikasi Server Virtual (VM) 🖥️
 
 | Spesifikasi | Detail |
 | :--- | :--- |
-| **Sistem Operasi Tamu (Guest OS)** | Debian Trixie (12.x) |
-| **Alamat IP Server** | `[Tuliskan Alamat IP Lokal Server]` |
-| **RAM VM** | [Jumlah RAM yang dialokasikan untuk VM, contoh: 2 GB] |
-| **vCPU** | [Jumlah Core CPU yang dialokasikan untuk VM, contoh: 2 Core] |
-| **Web Server yang Dipilih** | **[Apache2 / Nginx / OpenLiteSpeed]** |
-| **Versi PHP yang Dipakai** | **[mod_php / php-fpm / lsphp]** |
+| **Sistem Operasi Tamu (Guest OS)** | Debian Trixie (13.x) |
+| **Alamat IP Server** | `192.168.10.53` |
+| **RAM VM** | RAM:2GB |
+| **vCPU** | 2 Core|
+| **Web Server yang Dipilih** | **OpenLiteSpeed** |
+| **Versi PHP yang Dipakai** | **lsphp** |
 
 ---
 
