@@ -4,7 +4,19 @@
 
 Proyek ini dibuat untuk memenuhi tugas mata pelajaran **Administrasi Sistem Jaringan (ASJ)**, yang merupakan salah satu elemen Capaian Pembelajaran Konsentrasi Keahlian Teknik Komputer dan Jaringan (**CP KKTKJ**) pada program TJKT. Proyek ini berfokus pada implementasi layanan Web Server, konfigurasi PHP, dan pengamanan koneksi menggunakan SSL/HTTPS.
 
+**Kenapa kita membuat web server OLS?**
+karena OLS sendiri punya kelebihan yaitu 
+Cepat
+Ringan
+Ada cache bawaan
+Gratis & open-source
+Mudah dikonfigurasi
 
+namun ada juga kekurangan nya yaitu
+.htaccess tidak real-time
+Modul sedikit
+Dokumentasi kurang lengkap
+Kadang membingungkan pemula
 
 ---
 
