@@ -75,6 +75,28 @@ wget -O - https://repo.litespeed.sh | bash
     ```bash
     apt install openlitespeed
     ```
+  **Install PHP 8.4 + modul MySQL:**
+```bash
+apt install lsphp84 lsphp84-mysql
+```
+Start dan aktifkan service:
+```bash
+systemctl start lsws
+systemctl enable lsws
+```
+
+## Set Password Panel Admin 🔑##
+OpenLiteSpeed dikonfigurasi lewat browser, jadi kita perlu membuat akun agar bisa masuk ke panel pengaturannya. Berikut langkah-langkah yang perlu kamu ikuti:
+
+Jalankan script yang sudah disediakan:
+```bash
+/usr/local/lsws/admin/misc/admpass.sh
+```
+Masukkan username (misal: admin)
+Buat password → konfirmasi
+Buka browser: http://ip-server:7080
+
+
 * **Konfigurasi Virtual Host/Server Block:** [Jelaskan secara singkat penyesuaian konfigurasi yang Kalian lakukan pada file utama, misalnya penentuan Document Root dan port.]
 #### 2.3. Konfigurasi PHP 🐘
 
