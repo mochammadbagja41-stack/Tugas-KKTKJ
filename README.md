@@ -193,22 +193,6 @@ Certificate File: /etc/ssl/private/self.crt
 Save → **Graceful Restart**
 
 * **Konfigurasi Virtual Host/Server Block:** [Jelaskan secara singkat penyesuaian konfigurasi yang Kalian lakukan pada file utama, misalnya penentuan Document Root dan port.]
-#### 2.3. Konfigurasi PHP 🐘
-
-Kami menggunakan **lsphp** untuk mengintegrasikan PHP dengan *Web Server*.
-
-* **Instalasi PHP:**
-    ```bash
-    apt install lsphp84 lsphp84-mysql
-    ```
-**Integrasi:** [Jelaskan langkah-langkah integrasi antara PHP dengan Web Server yang Kalian pilih.]
-#### 2.4. Implementasi SSL (HTTPS) 🔒
-
-Untuk mengaktifkan akses HTTPS, kami membuat *self-signed certificate*.
-
-1.  Membuat direktori untuk *certificate*.
-2.  Membuat *Key* dan *Certificate* menggunakan OpenSSL.
-3.  Memodifikasi konfigurasi *Web Server* untuk menggunakan port **443** dan menunjuk ke *certificate* yang telah dibuat, serta memastikan akses dapat dilakukan melalui `https://[IP_SERVER]`.
 
 ---
 
@@ -216,9 +200,9 @@ Untuk mengaktifkan akses HTTPS, kami membuat *self-signed certificate*.
 
 Berdasarkan pengalaman kami dalam proyek ini, berikut adalah analisis kelebihan dan kekurangan dari *Web Server* yang kami gunakan:
 
-| Aspek | Kelebihan ([NAMA WEB SERVER]) 👍 | Kekurangan ([NAMA WEB SERVER]) 👎 |
+| Aspek | Kelebihan OLS 👍 | Kekurangan OLS 👎 |
 | :--- | :--- | :--- |
-| **Performa & Kecepatan** | gio | vanni |
+| **Performa & Kecepatan** | Optimasi HTTP/3 & QUIC → loading lebih cepat terutama untuk mobile | Saat trafik sangat besar, butuh penyesuaian cache & worker agar stabil. |
 | **Kemudahan Konfigurasi**| [Tuliskan kelebihannya.] | [Tuliskan kekurangannya.] |
 | **Fitur & Modularitas** | [Tuliskan kelebihannya.] | [Tuliskan kekurangannya.] |
 
