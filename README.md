@@ -85,7 +85,7 @@ systemctl start lsws
 systemctl enable lsws
 ```
 
-## Set Password Panel Admin 🔑##
+## Set Password Panel Admin 🔑
 OpenLiteSpeed dikonfigurasi lewat browser, jadi kita perlu membuat akun agar bisa masuk ke panel pengaturannya. Berikut langkah-langkah yang perlu kamu ikuti:
 
 Jalankan script yang sudah disediakan:
@@ -96,6 +96,101 @@ Masukkan username (misal: admin)
 Buat password → konfirmasi
 Buka browser: http://ip-server:7080
 
+## Test Website Default 🌐
+Nah, sekarang kita cek apakah OpenLiteSpeed sudah aktif dan bisa diakses. Yuk, kita uji dengan membuka halaman default-nya! 🚀
+
+Buka Web Browser → http://ip-server:8088
+Jika muncul halaman default → berhasil
+
+   ## Mengatur Versi PHP
+## Atur External App
+
+Pastikah lsphp84 sudah terinstal, untuk merubahnya ikuti tahapan beriku:
+Di menu kiri pilih: Server Configuration → External App
+Klik Add → pilih LiteSpeed SAPI App → Next
+Isi:
+Name: lsphp84
+Address: uds://tmp/lshttpd/lsphp.sock
+Notes: PHP 8.4
+Max Connections: 35
+Initial Request Timeout: 60
+Retry Timeout: 0
+Persistent Connection: Yes
+Command: /usr/local/lsws/lsphp84/bin/lsphp
+Instances: 1 (default)
+
+**Save → Graceful Restart**
+
+## Atur Script Handler
+
+Masih di menu kiri: Server Configuration → Script Handler
+Edit handler lsphp atau buat baru:
+Suffixes: php
+Handler Type: LiteSpeed SAPI
+Handler Name: lsphp84
+
+**Save → Graceful Restart**
+
+## Ubah Port 8088 → 80 🔄
+Secara default, OLS jalan di port 8088, sedangkan website pada umumnya pakai port 80 atau 443. Tenang aja, kita bisa ubah pengaturannya biar sama seperti web sungguhan! 🚀
+
+Login ke panel admin (http://ip-server:7080)
+Masuk ke Menu → Listeners → Default → Edit
+Ganti Port: 80
+Klik Save → Graceful Restart
+Sekarang akses website di browser: 👉 http://ip-server
+
+## Supaya index.php terbaca otomatis di OLS 📄
+Biasanya, kita memakai file index.php sebagai halaman utama website. Tapi di OLS, secara default yang bisa dibaca hanya index.html. Supaya website kita bisa menjalankan file index.php, kita perlu menambahkan sedikit pengaturan tambahan.
+
+Login ke admin panel: → http://ip-server:7080
+Menu kiri → Virtual Hosts → Example → General
+Cari bagian Index Files
+Biasanya isinya: index.html
+Ubah jadi: index.php, index.html
+Artinya OLS akan mencari index.php dulu, kalau tidak ada baru index.html
+
+**Klik Save**
+
+## Membuat Self-Signed SSL 🔐
+Supaya website kita bisa diakses lewat https, kita perlu menambahkan sertifikat SSL. Kali ini, kita akan membuat SSL self-signed, yaitu sertifikat buatan sendiri yang bisa digunakan untuk belajar atau pengujian di server lokal.
+
+**Buat Sertifikat Self-Signed**
+Mmasuk sebagai root, lalu ketik:
+```bash
+mkdir /etc/ssl/private
+```
+```bash
+cd /etc/ssl/private
+```
+```bash
+openssl req -x509 -newkey rsa:2048 -nodes -keyout self.key -out self.crt -days 365
+```
+
+Saat diminta mengisi data (Country, State, dst), boleh diisi asal atau tekan Enter saja.
+Jika proses berjalan normal, kita akan memiliki dua buah file yaitu self.key dan self.crt yang tersimpan di /etc/ssl/private
+
+## Menambahkan SSL/TSL di OLS
+
+Login ke admin panel: → http://ip-server:7080
+Masuk menu: Listeners → Add → +
+Isi dengan:
+Listener Name: SSL
+IP Address: ANY
+Port: 443
+Secure: Yes
+Pada bagian Virtual Host Mappings, Tambahkan:
+Virtual Host: Example (atau nama virtual host kamu)
+Domains: * (artinya semua domain/IP)
+Save
+
+Lalu pergi ke **Listener SSL > General
+
+Pada tab SSL → isi:
+Private Key File: /etc/ssl/private/self.key
+Certificate File: /etc/ssl/private/self.crt
+
+Save → **Graceful Restart**
 
 * **Konfigurasi Virtual Host/Server Block:** [Jelaskan secara singkat penyesuaian konfigurasi yang Kalian lakukan pada file utama, misalnya penentuan Document Root dan port.]
 #### 2.3. Konfigurasi PHP 🐘
