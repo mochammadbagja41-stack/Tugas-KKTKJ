@@ -1,0 +1,102 @@
+body {
+  margin: 0;
+  font-family: 'Poppins', sans-serif;
+  background: linear-gradient(to bottom right, #0a0a0a, #1b1b1b);
+  color: #fff;
+  overflow-x: hidden;
+}
+
+.cv-container {
+  width: 80%;
+  max-width: 900px;
+  margin: 50px auto;
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: 20px;
+  box-shadow: 0 0 15px rgba(255, 0, 80, 0.2);
+  padding: 30px;
+  animation: fadeUp 1s ease;
+}
+
+.foto {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.foto img {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  border: 3px solid #ff0050;
+  transition: 0.3s;
+}
+
+.foto img:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 20px #ff0050;
+}
+
+h1, h2 {
+  color: #ff0050;
+}
+
+.bio, .tentang, .pendidikan, .keahlian {
+  margin-bottom: 25px;
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+}
+
+ul li {
+  margin: 5px 0;
+  padding: 5px 0;
+  border-bottom: 1px dashed rgba(255, 255, 255, 0.2);
+}
+
+.skills span {
+  display: inline-block;
+  background: #ff0050;
+  padding: 5px 10px;
+  border-radius: 20px;
+  margin: 5px;
+  font-size: 14px;
+  transition: 0.3s;
+}
+
+.skills span:hover {
+  background: #fff;
+  color: #ff0050;
+}
+
+footer {
+  text-align: center;
+  margin-top: 20px;
+  font-size: 13px;
+  opacity: 0.6;
+}
+
+.fade-in {
+  opacity: 0;
+  transform: translateY(30px);
+  animation: fadeInUp 1s forwards;
+}
+
+@keyframes fadeInUp {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeUp {
+  from {
+    opacity: 0;
+    transform: translateY(50px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+

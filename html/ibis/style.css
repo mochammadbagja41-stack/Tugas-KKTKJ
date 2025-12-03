@@ -1,0 +1,140 @@
+/* Reset dasar */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+body {
+  overflow: hidden;
+  color: white;
+  height: 100vh;
+  background: radial-gradient(ellipse at bottom, #1b2735 0%, #090a0f 100%);
+}
+
+/* Efek bintang */
+.stars {
+  width: 100%;
+  height: 100%;
+  background: transparent;
+  background-image:
+    radial-gradient(2px 2px at 20px 30px, white, rgba(255,255,255,0)),
+    radial-gradient(1px 1px at 40px 70px, white, rgba(255,255,255,0)),
+    radial-gradient(2px 2px at 100px 150px, white, rgba(255,255,255,0)),
+    radial-gradient(1px 1px at 200px 300px, white, rgba(255,255,255,0)),
+    radial-gradient(2px 2px at 400px 600px, white, rgba(255,255,255,0));
+  background-repeat: repeat;
+  background-size: 800px 800px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  animation: moveStars 60s linear infinite;
+}
+
+@keyframes moveStars {
+  from { background-position: 0 0, 0 0, 0 0, 0 0, 0 0; }
+  to { background-position: -800px 800px, -400px 400px, -200px 600px, -600px 200px, -1000px 1000px; }
+}
+
+/* Efek kabut galaksi */
+.galaxy {
+  position: absolute;
+  top: 0; left: 0;
+  width: 100%; height: 100%;
+  background: radial-gradient(circle at 50% 50%, rgba(123, 76, 255, 0.5) 0%, transparent 70%),
+              radial-gradient(circle at 30% 70%, rgba(255, 160, 255, 0.3) 0%, transparent 70%),
+              radial-gradient(circle at 70% 30%, rgba(100, 200, 255, 0.4) 0%, transparent 70%);
+  filter: blur(100px);
+  animation: float 30s ease-in-out infinite alternate;
+}
+
+@keyframes float {
+  from { transform: translateY(0); }
+  to { transform: translateY(-20px); }
+}
+
+/* Konten */
+.content {
+  position: relative;
+  z-index: 10;
+  text-align: center;
+  padding-top: 20vh;
+}
+
+h1 {
+  font-size: 3em;
+  text-shadow: 0 0 20px #b09fff, 0 0 40px #c7b8ff;
+  animation: glow 3s ease-in-out infinite alternate;
+}
+
+@keyframes glow {
+  from { text-shadow: 0 0 10px #fff, 0 0 20px #7f5fff, 0 0 30px #a58eff; }
+  to { text-shadow: 0 0 20px #b09fff, 0 0 40px #c7b8ff, 0 0 60px #ffffff; }
+}
+
+button {
+  background: #5e42a6;
+  color: white;
+  border: none;
+  padding: 12px 25px;
+  margin-top: 25px;
+  border-radius: 25px;
+  font-size: 1.1em;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+button:hover {
+  background: #7b5fe0;
+  transform: scale(1.05);
+}
+
+/* Animasi fade */
+.fade-in {
+  animation: fadeIn 2s ease forwards;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(30px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* Profil anggota */
+#members {
+  display: none;
+  padding: 20px;
+}
+
+.member-container {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 25px;
+  margin-top: 30px;
+}
+
+.member-card {
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 15px;
+  padding: 20px;
+  width: 200px;
+  transition: transform 0.3s, background 0.3s;
+}
+
+.member-card:hover {
+  transform: scale(1.1);
+  background: rgba(255, 255, 255, 0.2);
+}
+
+.member-card img {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  border: 3px solid white;
+  margin-bottom: 10px;
+}
+
+.hidden {
+  display: none;
+}

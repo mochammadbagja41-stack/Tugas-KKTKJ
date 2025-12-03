@@ -1,0 +1,105 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap');
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background: linear-gradient(135deg, #dbeafe, #ffffff);
+    min-height: 100vh;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    padding: 50px 0;
+}
+
+.container {
+    animation: fadeIn 1s ease-in;
+}
+
+.card {
+    background: #ffffff;
+    border-radius: 20px;
+    padding: 30px;
+    width: 360px;
+    box-shadow: 0 10px 25px rgba(0, 80, 255, 0.2);
+    text-align: center;
+    position: relative;
+    overflow: visible;
+    transition: transform 0.3s ease;
+    padding-top: 100px;
+    border-top: 6px solid #3b82f6;
+}
+
+.card:hover {
+    transform: scale(1.05);
+}
+
+/* Foto Profil */
+.foto {
+    position: absolute;
+    top: -60px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.foto img {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    border: 5px solid #3b82f6;
+    object-fit: cover;
+    animation: float 3s ease-in-out infinite;
+}
+
+/* Nama & Pekerjaan */
+.nama {
+    color: #1e3a8a;
+    margin-top: 10px;
+    font-size: 1.5em;
+    font-weight: 700;
+}
+
+.pekerjaan {
+    color: #3b82f6;
+    font-weight: 500;
+    margin-bottom: 20px;
+}
+
+/* Bagian Info */
+.info {
+    text-align: left;
+    color: #1f2937;
+    font-size: 14px;
+}
+
+/* Tentang Saya & Keahlian */
+h2 {
+    color: #2563eb;
+    border-bottom: 2px solid #dbeafe;
+    padding-bottom: 5px;
+    text-align: left;
+}
+
+.tentang, .skills {
+    text-align: left;
+    margin-top: 20px;
+}
+
+.skills ul {
+    padding-left: 20px;
+    margin: 0;
+}
+
+.skills li {
+    margin: 6px 0;
+}
+
+/* Animasi */
+@keyframes float {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-8px); }
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
