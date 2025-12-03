@@ -203,8 +203,9 @@ Berdasarkan pengalaman kami dalam proyek ini, berikut adalah analisis kelebihan 
 | Aspek | Kelebihan OLS 👍 | Kekurangan OLS 👎 |
 | :--- | :--- | :--- |
 | **Performa & Kecepatan** | Optimasi HTTP/3 & QUIC → loading lebih cepat terutama untuk mobile | Saat trafik sangat besar, butuh penyesuaian cache & worker agar stabil. |
-| **Kemudahan Konfigurasi**| [Tuliskan kelebihannya.] | [Tuliskan kekurangannya.] |
-| **Fitur & Modularitas** | [Tuliskan kelebihannya.] | [Tuliskan kekurangannya.] |
+| **Kemudahan Konfigurasi**| Banyak fitur siap pakai (SSL, cache, security rules) → tidak perlu banyak instalasi tambahan.] | Perubahan konfigurasi sering memerlukan restart (tidak semua setting live reload). |
+| **Fitur & Modularitas** | Memiliki fitur lengkap bawaan seperti HTTP/3, SSL, anti-DDoS dasar, dan caching LiteSpeed.
+Modular → dapat menambahkan modul seperti security rules, cache plugin, dan lain-lain. | Ekosistem modul lebih sedikit dibanding Apache atau NGINX. |
 
 ---
 
