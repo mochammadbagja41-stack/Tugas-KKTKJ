@@ -236,4 +236,5 @@ Seluruh proses pengerjaan telah direkam dan diunggah ke YouTube.
 
 [![Thumbnail Video Pengerjaan](https://i.ytimg.com/an_webp/c4rFeq1Z9IA/mqdefault_6s.webp?du=3000&sqp=CIDCw8kG&rs=AOn4CLC8ILj5EelRfr_sZgxeQiXUf2nEPw)](https://youtu.be/c4rFeq1Z9IA?si=fsS4WfboTvNL13kY)
 
-**CP:LMS NEOAINK**
+**SUMBER:LMS NEOAINK**
+https://lms.neoaink.my.id/
