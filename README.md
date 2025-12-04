@@ -218,7 +218,7 @@ Berdasarkan pengalaman kami dalam proyek ini, berikut adalah analisis kelebihan 
 
 | Kendala yang Kalian Hadapi 🚧 | Solusi yang Ditemukan ✅ |
 | :--- | :--- |
-| [Tuliskan kendala teknis atau kolaborasi lain yang Kalian hadapi.] | [Jelaskan solusi spesifik Kalian.] |
+| Alhamdulillah tidak ada kendala pada saat membuat web server | - |
 
 ---
 
