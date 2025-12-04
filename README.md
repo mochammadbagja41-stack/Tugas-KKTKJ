@@ -212,7 +212,7 @@ Berdasarkan pengalaman kami dalam proyek ini, berikut adalah analisis kelebihan 
 
 #### 4.1. Kesan Selama Proses Pengerjaan ✨
 
-[Tuliskan kesan anggota kelompok, misalnya: "Kami merasa mendapatkan banyak ilmu baru, terutama dalam praktik Version Control menggunakan Git dan GitHub yang belum pernah kami lakukan sebelumnya."]
+Kami sekarang jadi tahu akan membuat web server,menemukan kekurakngan kelebihan OLS dan lain nya :)
 
 #### 4.2. Kendala dan Solusi yang Diterapkan 💡
 
