@@ -234,6 +234,6 @@ Seluruh proses pengerjaan telah direkam dan diunggah ke YouTube.
 
 **Link Video YouTube:**
 
-[![Thumbnail Video Pengerjaan](https://img.youtube.com/vi/1-qlNtQS1OA/0.jpg)](https://www.youtube.com/watch?v=1-qlNtQS1OA)
-
-**PETUNJUK:** Ganti semua teks di dalam tanda kurung siku `[ ... ]` dengan informasi proyek yang relevan.
+[![Thumbnail Video Pengerjaan](http://youtube.com/post/UgkxKD-57D8JQ9rq38iAU3I1h6g1kGNvFlbZ?si=Tl8EEIBlpYtXfQ8I)](https://youtu.be/c4rFeq1Z9IA?si=fsS4WfboTvNL13kY)
+https://youtu.be/c4rFeq1Z9IA?si=fsS4WfboTvNL13kY
+**CP:LMS NEOAINK**
