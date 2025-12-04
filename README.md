@@ -235,5 +235,5 @@ Seluruh proses pengerjaan telah direkam dan diunggah ke YouTube.
 **Link Video YouTube:**
 
 [![Thumbnail Video Pengerjaan]()](https://youtu.be/c4rFeq1Z9IA?si=fsS4WfboTvNL13kY)
-https://youtu.be/c4rFeq1Z9IA?si=fsS4WfboTvNL13kY
+
 **CP:LMS NEOAINK**
